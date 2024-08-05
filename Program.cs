@@ -1,11 +1,21 @@
 using ChrisPieShop.Models;
+using ChrisPieShop.Models.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services for dependency injection
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IPieRepository, PieRepository>();
+
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<ICategoryRepository, MockCategoryRepository>();
-builder.Services.AddScoped<IPieRepository, MockPieRepository>();
+
+// DB Context
+builder.Services.AddDbContext<ChrisPieShopDbContext>(options =>
+{
+    options.UseSqlServer(
+            builder.Configuration["ConnectionStrings:ChrisPieShopDbContextConnection"]);
+});
 
 var app = builder.Build();
 
@@ -22,8 +32,12 @@ if(app.Environment.IsDevelopment())
 }
 
 // Set defaults used typically in MVC to route to views
-app.MapDefaultControllerRoute();
+app.MapDefaultControllerRoute(); //{controller=Home/{action=Index}/{id?}}
+
 #endregion
+
+// seed the database if necessary
+DbInitializer.Seed(app);
 
 // Start of application
 app.Run();
