@@ -22,7 +22,7 @@ namespace ChrisPieShop.Controllers
 
             // View Model
             PieListViewModel piesListViewModel = new PieListViewModel
-                (_pieRepository.AllPies, "Cheese cakes");
+                (_pieRepository.AllPies, "All Pies");
 
             return View(piesListViewModel);
         }
