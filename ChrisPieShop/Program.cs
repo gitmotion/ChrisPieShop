@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using ChrisPieShop.Models;
 using ChrisPieShop.Models.Data;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +14,11 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddJsonOptions(options => 
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    });
 builder.Services.AddRazorPages();
 
 // DB Context
