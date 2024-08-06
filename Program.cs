@@ -14,6 +14,7 @@ builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 // DB Context
 builder.Services.AddDbContext<ChrisPieShopDbContext>(options =>
@@ -41,6 +42,8 @@ if (app.Environment.IsDevelopment())
 app.MapDefaultControllerRoute(); //{controller=Home/{action=Index}/{id?}}
 
 #endregion
+
+app.MapRazorPages();
 
 // seed the database if necessary
 DbInitializer.Seed(app);
