@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chris\\source\\repos\\ChrisPieShopTests\\ChrisPieShopTests.csproj": {}
+    "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShopTests\\ChrisPieShopTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chris\\source\\repos\\ChrisPieShopTests\\ChrisPieShopTests.csproj": {
+    "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShopTests\\ChrisPieShopTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\source\\repos\\ChrisPieShopTests\\ChrisPieShopTests.csproj",
+        "projectUniqueName": "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShopTests\\ChrisPieShopTests.csproj",
         "projectName": "ChrisPieShopTests",
-        "projectPath": "C:\\Users\\chris\\source\\repos\\ChrisPieShopTests\\ChrisPieShopTests.csproj",
+        "projectPath": "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShopTests\\ChrisPieShopTests.csproj",
         "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\source\\repos\\ChrisPieShopTests\\obj\\",
+        "outputPath": "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShopTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\chris\\source\\repos\\ChrisPieShop\\ChrisPieShop.csproj": {
-                "projectPath": "C:\\Users\\chris\\source\\repos\\ChrisPieShop\\ChrisPieShop.csproj"
+              "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShop\\ChrisPieShop.csproj": {
+                "projectPath": "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShop\\ChrisPieShop.csproj"
               }
             }
           }
@@ -95,14 +95,14 @@
         }
       }
     },
-    "C:\\Users\\chris\\source\\repos\\ChrisPieShop\\ChrisPieShop.csproj": {
+    "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShop\\ChrisPieShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\source\\repos\\ChrisPieShop\\ChrisPieShop.csproj",
+        "projectUniqueName": "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShop\\ChrisPieShop.csproj",
         "projectName": "ChrisPieShop",
-        "projectPath": "C:\\Users\\chris\\source\\repos\\ChrisPieShop\\ChrisPieShop.csproj",
+        "projectPath": "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShop\\ChrisPieShop.csproj",
         "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\source\\repos\\ChrisPieShop\\obj\\",
+        "outputPath": "C:\\Users\\chris\\source\\repos\\TestPieShop\\ChrisPieShop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
