@@ -31,5 +31,10 @@ namespace ChrisPieShop.Models
         {
             return _chrisPieShopDbContext.Pies.FirstOrDefault(p => p.PieId == pieId);
         }
+
+        public IEnumerable<Pie> SearchPies(string searchQuery)
+        {
+            return _chrisPieShopDbContext.Pies.Where(p => p.Name.Contains(searchQuery));
+        }
     }
 }

@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+using ChrisPieShop.App;
 using ChrisPieShop.Models;
 using ChrisPieShop.Models.Data;
 using Microsoft.EntityFrameworkCore;
@@ -13,8 +15,15 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddJsonOptions(options => 
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    });
+
 builder.Services.AddRazorPages();
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents(); // add support for blazor server-side rendering
 
 // DB Context
 builder.Services.AddDbContext<ChrisPieShopDbContext>(options =>
@@ -43,7 +52,12 @@ app.MapDefaultControllerRoute(); //{controller=Home/{action=Index}/{id?}}
 
 #endregion
 
+app.UseAntiforgery(); // required for blazor to work
+
 app.MapRazorPages();
+
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
 
 // seed the database if necessary
 DbInitializer.Seed(app);
