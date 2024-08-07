@@ -1,4 +1,4 @@
-# ChrisPieShop
+# DemoPieShop with ASP.NET Core
 Just a demo app with the example usages of the following in ASP.NET Core:
 - API Controllers
 - Razor for pages & Blazor fo search functionality
