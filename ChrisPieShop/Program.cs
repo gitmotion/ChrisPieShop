@@ -2,6 +2,7 @@ using System.Text.Json.Serialization;
 using ChrisPieShop.App;
 using ChrisPieShop.Models;
 using ChrisPieShop.Models.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,6 +33,11 @@ builder.Services.AddDbContext<ChrisPieShopDbContext>(options =>
             builder.Configuration["ConnectionStrings:ChrisPieShopDbContextConnection"]);
 });
 
+builder.Services.AddDefaultIdentity<IdentityUser>(
+    //options => options.SignIn.RequireConfirmedAccount = true
+    )
+    .AddEntityFrameworkStores<ChrisPieShopDbContext>();
+
 var app = builder.Build();
 
 #region Middleware
@@ -39,6 +45,9 @@ var app = builder.Build();
 // After build but before run
 app.UseStaticFiles();
 app.UseSession(); //Support for using sessions
+
+app.UseAuthentication(); //Middleware for identity provider
+
 
 // Only shown if the app is ran in a development setting
 if (app.Environment.IsDevelopment())

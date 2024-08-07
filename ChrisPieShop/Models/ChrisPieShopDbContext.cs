@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChrisPieShop.Models
 {
-    public class ChrisPieShopDbContext : DbContext
+    public class ChrisPieShopDbContext : IdentityDbContext
     {
         public ChrisPieShopDbContext(DbContextOptions<ChrisPieShopDbContext> options) : base(options)
         {
