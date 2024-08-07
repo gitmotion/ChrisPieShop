@@ -51,14 +51,14 @@
                             </li>
                         </ul>
                         <vc:shopping-cart-summary></vc:shopping-cart-summary>
-
+                        <partial name="_LoginPartial" />
                     </div>
                 </div>
             </nav>
         </header>
         @RenderBody()
 
-        <script src="_framework/blazor.web.js"></script>
+        @* <script src="_framework/blazor.web.js"></script> *@
 
         @RenderSection("Scripts", required: false)
     </div>
