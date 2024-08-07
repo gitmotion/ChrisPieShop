@@ -47,7 +47,7 @@ app.UseStaticFiles();
 app.UseSession(); //Support for using sessions
 
 app.UseAuthentication(); //Middleware for identity provider
-
+app.UseAuthorization(); //Middleware for authorization
 
 // Only shown if the app is ran in a development setting
 if (app.Environment.IsDevelopment())
